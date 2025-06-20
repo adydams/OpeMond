@@ -83,7 +83,7 @@ const Index = () => {
       subtitle: "Excellence in Every Clean",
     },
     {
-      url: "https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      url: "https://plus.unsplash.com/premium_photo-1667520405114-47d3677f966e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       title: "COMMERCIAL CLEANING EXPERTS",
       subtitle: "Trusted Across the UK",
     },
@@ -143,33 +143,40 @@ const stats = [
     <div className="min-h-screen bg-white">
       {/* Top Contact Bar */}
       <div className="bg-orange-600 text-white py-2 text-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-6">
-              <span className="flex items-center">
-                <span className="mr-2">Have any question?</span>
-                <Phone className="h-4 w-4 mr-1" />
-                +44 20 7123 4567
-              </span>
-              <span className="flex items-center">
-                <MapPin className="h-4 w-4 mr-1" />
-                London, Manchester, Birmingham & UK Wide
-              </span>
-            </div>
-            <div className="flex items-center space-x-4">
-              <span className="flex items-center">
-                <Mail className="h-4 w-4 mr-1" />
-                info@opemond.co.uk
-              </span>
-              <div className="flex space-x-2">
-                <Facebook className="h-4 w-4 hover:text-orange-500 cursor-pointer" />
-                <Twitter className="h-4 w-4 hover:text-orange-500 cursor-pointer" />
-                <Instagram className="h-4 w-4 hover:text-orange-500 cursor-pointer" />
-              </div>
-            </div>
-          </div>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
+      
+      {/* Left Side: Contact Info */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-6 text-center sm:text-left space-y-1 sm:space-y-0">
+        <span className="flex items-center justify-center sm:justify-start">
+          <span className="mr-1">Have any question?</span>
+          <Phone className="h-4 w-4 mr-1" />
+          +44 20 7123 4567
+        </span>
+
+        <span className="flex items-center justify-center sm:justify-start">
+          <MapPin className="h-4 w-4 mr-1" />
+          London, Manchester, Birmingham & UK Wide
+        </span>
+      </div>
+
+      {/* Right Side: Email & Social */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 text-center sm:text-left space-y-1 sm:space-y-0">
+        <span className="flex items-center justify-center sm:justify-start">
+          <Mail className="h-4 w-4 mr-1" />
+          info@opemond.co.uk
+        </span>
+        <div className="flex justify-center space-x-2">
+          <Facebook className="h-4 w-4 hover:text-orange-300 cursor-pointer" />
+          <Twitter className="h-4 w-4 hover:text-orange-300 cursor-pointer" />
+          <Instagram className="h-4 w-4 hover:text-orange-300 cursor-pointer" />
         </div>
       </div>
+
+    </div>
+  </div>
+</div>
+
 
       {/* Navigation */}
       <nav className="bg-white shadow-lg">
@@ -331,36 +338,37 @@ const stats = [
       </nav>
 
       {/* Hero Carousel Section */}
-      <section id="home" className="relative w-full">
-        <Carousel
-          showThumbs={false}
-          showStatus={false}
-          autoPlay
-          infiniteLoop
-          interval={5000}
-          stopOnHover={false}
-          emulateTouch
-          showArrows
-        >
-          {carouselImages.map((image, index) => (
-            <div key={index} className="relative">
-              <img
-                src={image.url}
-                alt={image.title}
-                className="object-cover h-[600px] w-full"
-              />
-              <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white px-4">
-                <h1 className="text-3xl md:text-5xl font-bold mb-2 text-center">
-                  {image.title}
-                </h1>
-                <p className="text-lg md:text-2xl font-light text-center">
-                  {image.subtitle}
-                </p>
-              </div>
-            </div>
-          ))}
-        </Carousel>
-      </section>
+    <section id="home" className="relative w-full">
+  <Carousel
+    showThumbs={false}
+    showStatus={false}
+    autoPlay
+    infiniteLoop
+    interval={5000}
+    stopOnHover={false}
+    emulateTouch
+    showArrows
+  >
+    {carouselImages.map((image, index) => (
+      <div key={index} className="relative">
+        <img
+          src={image.url}
+          alt={image.title}
+          className="object-cover w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px]"
+        />
+        <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white px-4">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-2 text-center leading-snug">
+            {image.title}
+          </h1>
+          <p className="text-sm sm:text-lg md:text-2xl font-light text-center max-w-2xl">
+            {image.subtitle}
+          </p>
+        </div>
+      </div>
+    ))}
+  </Carousel>
+</section>
+
 
       {/* Services Training Section */}
       <section className="py-20 bg-slate-700 text-white">
@@ -401,7 +409,7 @@ const stats = [
 
             <div>
               <img
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="https://plus.unsplash.com/premium_photo-1667520405114-47d3677f966e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Professional cleaning training"
                 className="w-full h-80 object-cover rounded-lg shadow-lg"
               />
@@ -516,7 +524,7 @@ const stats = [
 
             <div>
               <img
-                src="https://images.unsplash.com/photo-1582562124811-c09040d0a901?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
                 alt="Professional cleaning equipment"
                 className="w-full h-96 object-cover rounded-lg shadow-lg"
               />
