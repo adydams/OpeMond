@@ -82,41 +82,41 @@ const Index = () => {
       title: "PROFESSIONAL CLEANING SERVICES",
       subtitle: "Excellence in Every Clean",
     },
-    {
-      url: "https://plus.unsplash.com/premium_photo-1667520405114-47d3677f966e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      title: "COMMERCIAL CLEANING EXPERTS",
-      subtitle: "Trusted Across the UK",
-    },
+   
     {
       url: "https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
       title: "RESIDENTIAL CLEANING SOLUTIONS",
       subtitle: "Your Home, Our Priority",
     },
+     {
+      url: "https://plus.unsplash.com/premium_photo-1663047397245-2ddad26c5dd7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D",
+      title: "COMMERCIAL CLEANING EXPERTS",
+      subtitle: "Trusted Across the UK",
+    }
   ];
-  
-const stats = [
-  {
-    icon: BookText ,
-    value: "94,532",
-    label: "Learners",
-  },
-  {
-    icon: GraduationCap ,
-    value: "60,483",
-    label: "Graduates",
-  },
-  {
-    icon: Globe,
-    value: "35",
-    label: "Countries Reached",
-  },
-  {
-    icon: School,
-    value: "1,560",
-    label: "Courses Published",
-  },
-];
 
+  const stats = [
+    {
+      icon: BookText,
+      value: "94,532",
+      label: "Learners",
+    },
+    {
+      icon: GraduationCap,
+      value: "60,483",
+      label: "Happy Clients",
+    },
+    {
+      icon: Globe,
+      value: "35",
+      label: "Countries Reached",
+    },
+    {
+      icon: School,
+      value: "1,560",
+      label: "Trainees",
+    },
+  ];
 
   const testimonials = [
     {
@@ -143,40 +143,37 @@ const stats = [
     <div className="min-h-screen bg-white">
       {/* Top Contact Bar */}
       <div className="bg-orange-600 text-white py-2 text-sm">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
-      
-      {/* Left Side: Contact Info */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-6 text-center sm:text-left space-y-1 sm:space-y-0">
-        <span className="flex items-center justify-center sm:justify-start">
-          <span className="mr-1">Have any question?</span>
-          <Phone className="h-4 w-4 mr-1" />
-          +44 20 7123 4567
-        </span>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
+            {/* Left Side: Contact Info */}
+            <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-6 text-center sm:text-left space-y-1 sm:space-y-0">
+              <span className="flex items-center justify-center sm:justify-start">
+                <span className="mr-1">Have any question?</span>
+                <Phone className="h-4 w-4 mr-1" />
+                +44 20 7123 4567
+              </span>
 
-        <span className="flex items-center justify-center sm:justify-start">
-          <MapPin className="h-4 w-4 mr-1" />
-          London, Manchester, Birmingham & UK Wide
-        </span>
-      </div>
+              <span className="flex items-center justify-center sm:justify-start">
+                <MapPin className="h-4 w-4 mr-1" />
+                London, Manchester, Birmingham & UK Wide
+              </span>
+            </div>
 
-      {/* Right Side: Email & Social */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 text-center sm:text-left space-y-1 sm:space-y-0">
-        <span className="flex items-center justify-center sm:justify-start">
-          <Mail className="h-4 w-4 mr-1" />
-          info@opemond.co.uk
-        </span>
-        <div className="flex justify-center space-x-2">
-          <Facebook className="h-4 w-4 hover:text-orange-300 cursor-pointer" />
-          <Twitter className="h-4 w-4 hover:text-orange-300 cursor-pointer" />
-          <Instagram className="h-4 w-4 hover:text-orange-300 cursor-pointer" />
+            {/* Right Side: Email & Social */}
+            <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 text-center sm:text-left space-y-1 sm:space-y-0">
+              <span className="flex items-center justify-center sm:justify-start">
+                <Mail className="h-4 w-4 mr-1" />
+                info@opemond.co.uk
+              </span>
+              <div className="flex justify-center space-x-2">
+                <Facebook className="h-4 w-4 hover:text-orange-300 cursor-pointer" />
+                <Twitter className="h-4 w-4 hover:text-orange-300 cursor-pointer" />
+                <Instagram className="h-4 w-4 hover:text-orange-300 cursor-pointer" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-    </div>
-  </div>
-</div>
-
 
       {/* Navigation */}
       <nav className="bg-white shadow-lg">
@@ -338,37 +335,36 @@ const stats = [
       </nav>
 
       {/* Hero Carousel Section */}
-    <section id="home" className="relative w-full">
-  <Carousel
-    showThumbs={false}
-    showStatus={false}
-    autoPlay
-    infiniteLoop
-    interval={5000}
-    stopOnHover={false}
-    emulateTouch
-    showArrows
-  >
-    {carouselImages.map((image, index) => (
-      <div key={index} className="relative">
-        <img
-          src={image.url}
-          alt={image.title}
-          className="object-cover w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px]"
-        />
-        <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white px-4">
-          <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-2 text-center leading-snug">
-            {image.title}
-          </h1>
-          <p className="text-sm sm:text-lg md:text-2xl font-light text-center max-w-2xl">
-            {image.subtitle}
-          </p>
-        </div>
-      </div>
-    ))}
-  </Carousel>
-</section>
-
+      <section id="home" className="relative w-full">
+        <Carousel
+          showThumbs={false}
+          showStatus={false}
+          autoPlay
+          infiniteLoop
+          interval={5000}
+          stopOnHover={false}
+          emulateTouch
+          showArrows
+        >
+          {carouselImages.map((image, index) => (
+            <div key={index} className="relative">
+              <img
+                src={image.url}
+                alt={image.title}
+                className="object-cover w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px]"
+              />
+              <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white px-4">
+                <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-2 text-center leading-snug">
+                  {image.title}
+                </h1>
+                <p className="text-sm sm:text-lg md:text-2xl font-light text-center max-w-2xl">
+                  {image.subtitle}
+                </p>
+              </div>
+            </div>
+          ))}
+        </Carousel>
+      </section>
 
       {/* Services Training Section */}
       <section className="py-20 bg-slate-700 text-white">
@@ -410,6 +406,7 @@ const stats = [
             <div>
               <img
                 src="https://plus.unsplash.com/premium_photo-1667520405114-47d3677f966e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                
                 alt="Professional cleaning training"
                 className="w-full h-80 object-cover rounded-lg shadow-lg"
               />
@@ -524,7 +521,7 @@ const stats = [
 
             <div>
               <img
-                src="https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 alt="Professional cleaning equipment"
                 className="w-full h-96 object-cover rounded-lg shadow-lg"
               />
@@ -576,24 +573,28 @@ const stats = [
         </div>
       </section>
 
-  <section
-      className="relative w-full bg-cover bg-center"
-      style={{
-        backgroundImage: `url('https://images.unsplash.com/photo-1721322800607-8c38375eef04?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80')`
-    }}
-    >
-      <div className="absolute inset-0  z-0" />
-      <div className="relative z-10 max-w-7xl mx-auto py-20 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-center text-white">
-        {stats.map(({ icon: Icon, value, label }, index) => (
-          <div key={index} className="flex flex-col items-center">
-            <Icon className="w-14 h-14 mb-4 text-white" />
-            <h3 className="text-2xl font-bold">{value}</h3>
-            <p className="text-sm mt-1">{label}</p>
-            <div className="bg-white w-0.5"  ></div>
-          </div> 
-      ))}
-      </div>
-    </section>
+      <section
+        className="relative w-full bg-cover bg-center "
+        style={{
+          backgroundImage: `url('https://plus.unsplash.com/premium_photo-1663047397245-2ddad26c5dd7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D')`,
+          
+        }}
+      >
+        <div className="absolute inset-0  z-0" />
+        <div className="relative z-10 max-w-7xl mx-auto py-20 px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-center text-white">
+          {stats.map(({ icon: Icon, value, label }, index) => (
+            <div key={index} className="grid grid-cols-2 items-center ">
+             <div className="flex flex-col items-center"> 
+                <Icon className="w-14 h-14 mb-4 text-white" />
+                <h3 className="text-2xl font-bold">{value}</h3>
+                <p className="text-sm mt-1">{label}</p>
+              </div>
+                <div className="w-px h-32 bg-gray-300 mx-4"></div>
+            </div>
+            
+          ))}
+        </div>
+      </section>
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-orange-600 mt-5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
